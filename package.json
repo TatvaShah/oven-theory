@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "og": "next build && node scripts/make-og.mjs"
+    "og": "next build && node scripts/make-og.mjs",
+    "prebuild": "node scripts/optimize-images.mjs",
+    "predev": "node scripts/optimize-images.mjs"
   },
   "dependencies": {
     "next": "16.4.2",
@@ -18,6 +20,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "sharp": "^0.34.5",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
