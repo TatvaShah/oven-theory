@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "prebuild": "node scripts/optimize-images.mjs",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "og": "next build && node scripts/make-og.mjs",
-    "prebuild": "node scripts/optimize-images.mjs",
+    "og": "npm run build && node scripts/make-og.mjs",
     "predev": "node scripts/optimize-images.mjs"
   },
   "dependencies": {
